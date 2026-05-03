@@ -143,7 +143,7 @@ class Logic(Window):
 
         # Add to csv
         try:
-            with open('movie_details.csv', 'a', newline='') as csvfile:
+            with open('movie_details.csv', 'a') as csvfile:
                 writer = csv.writer(csvfile)
                 writer.writerow([movie_title, self.drop_genre.currentText(), self.drop_year.currentText(), self.drop_rating.currentText(), self.drop_status.currentText()])
         except FileNotFoundError:
